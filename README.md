@@ -161,6 +161,8 @@ To ensure that this process don't have any error and mistake, I would like to ma
    - Using the `docker image prune -f`
 2. Understanding GitHub Actions component such as stage, steps, run, script, needs, etc.
    - Take time and search the meaning of each component such as I want to have the dependency for each stages like `depends_on` in docker-compose and found that in GitHub Actions it use `needs`
+3. The application is not run on target path
+   - Unknow about `-p` flag -> try to understand it
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
