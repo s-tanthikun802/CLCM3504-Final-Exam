@@ -32,7 +32,7 @@ jobs:
           docker push stanthikun802/clcm3504-sorawat-final:latest
 
   deploy:
-    name: Deploy to EC2 on master branch push
+    name: Deploy to EC2
     runs-on: ubuntu-latest
     needs: build_and_push_docker_image
 
