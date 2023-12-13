@@ -12,7 +12,7 @@
       - [Set up using Apache server](#set-up-using-apache-server)
       - [Set up using Docker](#set-up-using-docker)
     - [Deploy the website using CI/CD, Terraform, and Docker](#deploy-the-website-using-cicd-terraform-and-docker)
-  - [CI/CD workflow](#cicd-workflow)
+  - [How to ensure automatic deployment](#how-to-ensure-automatic-deployment)
   - [Challenge faced during the process and overcome](#challenge-faced-during-the-process-and-overcome)
   - [License](#license)
 
@@ -149,7 +149,7 @@
                 docker image prune -f
    ```
 
-## CI/CD workflow
+## How to ensure automatic deployment
 For every changes that push to main branch, it will automatically build the Docker image then push the image to Docker repository (Docker Hub).
 
 After that if the first stage running successfully, the GitHub Actions will access to EC2 instance to pull that Docker image and try to stop and remove old version of Docker container. Next, it will start a new container by using new Docker image version that pulled before.
