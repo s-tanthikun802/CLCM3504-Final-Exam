@@ -1,0 +1,44 @@
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header and navigation */
+header {
+    background-color: #D0DAEE;
+    color: black;
+    padding: 10px 0;
+    font-size: 18px;
+    height: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Style the footer */
+footer {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 30px;
+    background-color: #D0DAEE;
+    text-align: center;
+}
+.mainBlock{
+    background-color: lightgoldenrodyellow;
+    height: 670px;
+    padding: 80px;
+}
