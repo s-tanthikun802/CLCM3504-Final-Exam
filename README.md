@@ -1,5 +1,6 @@
 # CLCM3504-Final-Exam
 
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/s-tanthikun802/CLCM3504-Final-Exam/main.yml)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Table of Contents
