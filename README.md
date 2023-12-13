@@ -150,19 +150,19 @@
    ```
 
 ## How to ensure automatic deployment
-For every changes that push to main branch, it will automatically build the Docker image then push the image to Docker repository (Docker Hub).
+For every change that is pushed to the main branch, it will automatically build the Docker image and then push the image to the Docker repository (Docker Hub).
 
-After that if the first stage running successfully, the GitHub Actions will access to EC2 instance to pull that Docker image and try to stop and remove old version of Docker container. Next, it will start a new container by using new Docker image version that pulled before.
+After that, if the first stage runs successfully, the GitHub Actions will access to EC2 instance to pull that Docker image and try to stop and remove the old version of the Docker container. Next, it will start a new container by using the new Docker image version that was pulled before.
 
-To ensure that this process don't have any error and mistake, I would like to make sure that we have the space for everytime that pull the new image so that I decided to remove unsued image by using `docker image prune -f`
+To ensure that this process won't have any error or mistake, I would like to make sure that we have space left for every time that pull a new image so I decided to remove the unused image by using the `docker image prune -f`
 
 ## Challenge faced during the process and overcome
-1. The EC2 instance don't have space left for pulling the new image
+1. The EC2 instance doesn't have any space left for pulling the new image
    - Using the `docker image prune -f`
-2. Understanding GitHub Actions component such as stage, steps, run, script, needs, etc.
-   - Take time and search the meaning of each component such as I want to have the dependency for each stages like `depends_on` in docker-compose and found that in GitHub Actions it use `needs`
-3. The application is not run on target path
-   - Unknow about `-p` flag -> try to understand it
+2. Understanding GitHub Actions components such as stage, steps, run, script, needs, etc.
+   - Take time and search the meaning of each component such as I want to have the dependency for each stage like `depends_on` in docker-compose and found that GitHub Actions use `needs`
+3. The application is not run on the target path
+   - Unknown about `-p` flag -> try to understand it
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
